@@ -1,0 +1,78 @@
+<section class="tt-page-hero" id="TintypePageHero-{{ section.id }}">
+  <div class="tt-page-hero__bg">
+    {%- if section.settings.image != blank -%}
+      {{
+        section.settings.image
+        | image_url: width: 3840
+        | image_tag:
+          width: section.settings.image.width,
+          height: section.settings.image.height,
+          alt: section.settings.image.alt,
+          sizes: '100vw',
+          widths: '832, 1200, 1600, 1920, 2560, 3840',
+          fetchpriority: 'high'
+      }}
+    {%- endif -%}
+    <div class="tt-page-hero__overlay"></div>
+    <div class="tt-page-hero__pattern"></div>
+  </div>
+  <div class="tt-page-hero__content">
+    {%- if section.settings.badge_text != blank -%}
+      <div class="tt-page-hero__badge">{{ section.settings.badge_text }}</div>
+    {%- endif -%}
+    <h1 class="tt-page-hero__heading">
+      {{ section.settings.heading_line_1 }}
+      {%- if section.settings.heading_line_2 != blank -%}
+        <span>{{ section.settings.heading_line_2 }}</span>
+      {%- endif -%}
+    </h1>
+    {%- if section.settings.subtitle != blank -%}
+      <p class="tt-page-hero__subtitle">{{ section.settings.subtitle }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Tintype Page Hero",
+  "tag": "section",
+  "class": "tt-page-hero-wrapper section-wrapper",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge text",
+      "default": "About Tintype Thread Company"
+    },
+    {
+      "type": "text",
+      "id": "heading_line_1",
+      "label": "Heading line 1",
+      "default": "THE STORY BEHIND"
+    },
+    {
+      "type": "text",
+      "id": "heading_line_2",
+      "label": "Heading line 2 (accent color)",
+      "default": "THE THREAD"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "How a box of family photos became a mission to preserve working-class American history."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tintype Page Hero",
+      "category": "Tintype"
+    }
+  ]
+}
+{% endschema %}

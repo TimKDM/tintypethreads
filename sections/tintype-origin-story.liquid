@@ -1,0 +1,146 @@
+<section class="tt-origin" id="TintypeOrigin-{{ section.id }}">
+  <div class="tt-origin__inner">
+    <div class="tt-origin__grid">
+      <div class="tt-origin__image-col tt-fade-in tt-fade-in--left">
+        <div class="tt-origin__frame">
+          <div class="tt-origin__frame-inner">
+            {%- if section.settings.image_main != blank -%}
+              {{
+                section.settings.image_main
+                | image_url: width: 800
+                | image_tag:
+                  width: section.settings.image_main.width,
+                  height: section.settings.image_main.height,
+                  alt: section.settings.image_main.alt,
+                  sizes: '(min-width: 1024px) 40vw, 80vw',
+                  widths: '400, 600, 800',
+                  loading: 'lazy'
+              }}
+            {%- else -%}
+              <span class="tt-origin__placeholder">[ Family Photo c. 1954 ]</span>
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="tt-origin__frame-second">
+          <div class="tt-origin__frame-second-inner">
+            {%- if section.settings.image_secondary != blank -%}
+              {{
+                section.settings.image_secondary
+                | image_url: width: 400
+                | image_tag:
+                  width: section.settings.image_secondary.width,
+                  height: section.settings.image_secondary.height,
+                  alt: section.settings.image_secondary.alt,
+                  sizes: '20vw',
+                  widths: '200, 400',
+                  loading: 'lazy'
+              }}
+            {%- else -%}
+              <span class="tt-origin__placeholder tt-origin__placeholder--small">[ Photo ]</span>
+            {%- endif -%}
+          </div>
+        </div>
+        {%- if section.settings.caption != blank -%}
+          <span class="tt-origin__caption">{{ section.settings.caption }}</span>
+        {%- endif -%}
+      </div>
+      <div class="tt-origin__content tt-fade-in tt-fade-in--right">
+        {%- if section.settings.heading != blank -%}
+          <h2>{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'paragraph' -%}
+              <p class="{% if block.settings.lead %}tt-origin__lead{% endif %}" {{ block.shopify_attributes }}>
+                {{ block.settings.text }}
+              </p>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Tintype Origin Story",
+  "tag": "section",
+  "class": "tt-origin-wrapper section-wrapper",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_main",
+      "label": "Main image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_secondary",
+      "label": "Secondary image (overlay)"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Image caption",
+      "default": "The shoebox that started it all"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading (HTML)",
+      "default": "IT STARTED WITH <span>A SHOEBOX</span>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "name": "Paragraph",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "checkbox",
+          "id": "lead",
+          "label": "Lead paragraph (larger, bold)",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tintype Origin Story",
+      "category": "Tintype",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "settings": {
+            "text": "In early 2026, I found a box of old photographs in my grandmother's attic.",
+            "lead": true
+          }
+        },
+        {
+          "type": "paragraph",
+          "settings": {
+            "text": "Faces I'd never met stared back at me — great-uncles in work clothes, cousins at county fairs, Sunday dinners with too many people crammed around the table. Some photos had names scrawled on the back. Most didn't."
+          }
+        },
+        {
+          "type": "paragraph",
+          "settings": {
+            "text": "These weren't famous people. They were factory workers, farmers, mothers, veterans. The backbone of America that never made the history books."
+          }
+        },
+        {
+          "type": "paragraph",
+          "settings": {
+            "text": "I couldn't let them disappear. Their stories deserved more than a dusty album in an attic nobody visits."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

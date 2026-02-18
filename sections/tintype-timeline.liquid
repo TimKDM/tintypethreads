@@ -1,0 +1,101 @@
+<section class="tt-timeline" id="TintypeTimeline-{{ section.id }}">
+  <div class="tt-timeline__inner">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="tt-timeline__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    <div class="tt-timeline__track">
+      {%- for block in section.blocks -%}
+        <div class="tt-timeline__item tt-fade-in" {{ block.shopify_attributes }}>
+          <div class="tt-timeline__content">
+            <h3>{{ block.settings.title }}</h3>
+            <p>{{ block.settings.text }}</p>
+          </div>
+          <div class="tt-timeline__year">{{ block.settings.year }}</div>
+          <div class="tt-timeline__spacer"></div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Tintype Timeline",
+  "tag": "section",
+  "class": "tt-timeline-wrapper section-wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "THE JOURNEY"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "event",
+      "name": "Timeline event",
+      "settings": [
+        {
+          "type": "text",
+          "id": "year",
+          "label": "Year",
+          "default": "2026"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "THE DISCOVERY"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "Found a shoebox of family photographs spanning 70 years of American history."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tintype Timeline",
+      "category": "Tintype",
+      "blocks": [
+        {
+          "type": "event",
+          "settings": {
+            "year": "2026",
+            "title": "THE DISCOVERY",
+            "text": "Found a shoebox of family photographs spanning 70 years of American history. Faces without names, stories without endings."
+          }
+        },
+        {
+          "type": "event",
+          "settings": {
+            "year": "2026",
+            "title": "THE IDEA",
+            "text": "What if these photos lived on something people actually wore? What if history was wearable? Tintype Thread Company was born."
+          }
+        },
+        {
+          "type": "event",
+          "settings": {
+            "year": "2026",
+            "title": "FIRST COLLECTION",
+            "text": "Launched with four designs from our family archive. Each shirt printed on USA-made cotton, each photo with its story documented."
+          }
+        },
+        {
+          "type": "event",
+          "settings": {
+            "year": "NOW",
+            "title": "EXPANDING THE ARCHIVE",
+            "text": "Now sourcing vintage logos, union badges, and industrial marks from America's manufacturing era. The archive grows."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

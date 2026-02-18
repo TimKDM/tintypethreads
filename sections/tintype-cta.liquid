@@ -1,0 +1,74 @@
+<section class="tt-cta" id="TintypeCta-{{ section.id }}">
+  <div class="tt-cta__inner">
+    <div class="tt-cta__content">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="tt-fade-in">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+        <p class="tt-fade-in">{{ section.settings.text }}</p>
+      {%- endif -%}
+      <div class="tt-cta__buttons tt-fade-in">
+        {%- if section.settings.button_label_1 != blank -%}
+          <a href="{{ section.settings.button_link_1 }}" class="tt-btn tt-btn-primary">
+            {{ section.settings.button_label_1 }}
+          </a>
+        {%- endif -%}
+        {%- if section.settings.button_label_2 != blank -%}
+          <a href="{{ section.settings.button_link_2 }}" class="tt-btn tt-btn-outline">
+            {{ section.settings.button_label_2 }}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Tintype CTA",
+  "tag": "section",
+  "class": "tt-cta-wrapper section-wrapper",
+  "settings": [
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading (HTML)",
+      "default": "HAVE PHOTOS <span>GATHERING DUST?</span>"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Description",
+      "default": "We're always looking for new stories to tell. If you have family photographs from the 1920s-1990s and want to see them preserved, we'd love to hear from you."
+    },
+    {
+      "type": "text",
+      "id": "button_label_1",
+      "label": "Primary button label",
+      "default": "SUBMIT YOUR PHOTOS"
+    },
+    {
+      "type": "url",
+      "id": "button_link_1",
+      "label": "Primary button link"
+    },
+    {
+      "type": "text",
+      "id": "button_label_2",
+      "label": "Secondary button label",
+      "default": "SHOP THE COLLECTION"
+    },
+    {
+      "type": "url",
+      "id": "button_link_2",
+      "label": "Secondary button link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tintype CTA",
+      "category": "Tintype"
+    }
+  ]
+}
+{% endschema %}

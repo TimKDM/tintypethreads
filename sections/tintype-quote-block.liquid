@@ -1,0 +1,50 @@
+<section class="tt-quote-block-section {{ section.settings.background }}" id="TintypeQuote-{{ section.id }}">
+  <div class="tt-quote-block-section__inner">
+    <div class="tt-quote-block tt-fade-in">
+      {%- if section.settings.quote != blank -%}
+        <p>{{ section.settings.quote }}</p>
+      {%- endif -%}
+      {%- if section.settings.citation != blank -%}
+        <cite>{{ section.settings.citation }}</cite>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Tintype Quote Block",
+  "tag": "section",
+  "class": "tt-quote-block-wrapper section-wrapper",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Quote text",
+      "default": "These stories deserve to be seen. Not locked away in albums. Not forgotten in attics. Worn proudly, shared openly, preserved forever."
+    },
+    {
+      "type": "text",
+      "id": "citation",
+      "label": "Citation",
+      "default": "— The moment Tintype Thread Company was born"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Background style",
+      "options": [
+        { "value": "tt-bg-cream", "label": "Cream" },
+        { "value": "tt-bg-white", "label": "White" }
+      ],
+      "default": "tt-bg-cream"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tintype Quote Block",
+      "category": "Tintype"
+    }
+  ]
+}
+{% endschema %}

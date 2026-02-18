@@ -1,0 +1,112 @@
+<section class="tt-founder {{ section.settings.background }}" id="TintypeFounder-{{ section.id }}">
+  <div class="tt-founder__inner">
+    <div class="tt-founder__grid tt-fade-in">
+      <div class="tt-founder__image">
+        <div class="tt-founder__image-inner">
+          {%- if section.settings.image != blank -%}
+            {{
+              section.settings.image
+              | image_url: width: 600
+              | image_tag:
+                width: section.settings.image.width,
+                height: section.settings.image.height,
+                alt: section.settings.name,
+                sizes: '(min-width: 1024px) 300px, 250px',
+                widths: '250, 300, 600',
+                loading: 'lazy'
+            }}
+          {%- else -%}
+            <span>[ Founder Photo ]</span>
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="tt-founder__content">
+        {%- if section.settings.name != blank -%}
+          <h3>{{ section.settings.name }}</h3>
+        {%- endif -%}
+        {%- if section.settings.title != blank -%}
+          <div class="tt-founder__title">{{ section.settings.title }}</div>
+        {%- endif -%}
+        {%- for block in section.blocks -%}
+          <p {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Tintype Founder",
+  "tag": "section",
+  "class": "tt-founder-wrapper section-wrapper",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Founder image"
+    },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Name",
+      "default": "THE FOUNDER"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Keeper of the Archive"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "Background",
+      "options": [
+        { "value": "tt-bg-cream", "label": "Cream" },
+        { "value": "tt-bg-white", "label": "White" }
+      ],
+      "default": "tt-bg-cream"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "name": "Paragraph",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tintype Founder",
+      "category": "Tintype",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "settings": {
+            "text": "I grew up hearing stories about family members I never met — the uncle who worked the Pittsburgh steel mills, the grandmother who raised six kids during the Depression, the cousin who never came home from the war."
+          }
+        },
+        {
+          "type": "paragraph",
+          "settings": {
+            "text": "When I found that shoebox of photographs, I realized the stories were fading faster than the photos. Names were being forgotten. Faces were becoming strangers."
+          }
+        },
+        {
+          "type": "paragraph",
+          "settings": {
+            "text": "Tintype Thread Company is my way of making sure that doesn't happen. Not just for my family — for all the working-class American families whose stories deserve to be remembered."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

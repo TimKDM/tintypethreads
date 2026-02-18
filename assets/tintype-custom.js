@@ -7,7 +7,7 @@
   'use strict';
 
   // Fade-in on scroll using IntersectionObserver
-  var fadeElements = document.querySelectorAll('.tt-fade-in');
+  var fadeElements = document.querySelectorAll('.tt-fade-in, .tt-fade-in--left, .tt-fade-in--right');
   if (fadeElements.length > 0) {
     var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
