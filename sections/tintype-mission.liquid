@@ -1,0 +1,67 @@
+<section class="tt-mission" id="TintypeMission-{{ section.id }}">
+  <div class="tt-mission__inner">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="tt-mission__heading tt-fade-in">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    <div class="tt-mission__text tt-fade-in">
+      {%- for block in section.blocks -%}
+        <p {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Tintype Mission",
+  "tag": "section",
+  "class": "tt-mission-wrapper section-wrapper",
+  "settings": [
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading (HTML)",
+      "default": "PRESERVING HISTORY,<br><span>ONE SHIRT AT A TIME</span>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "name": "Paragraph",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tintype Mission",
+      "category": "Tintype",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p><strong>Tintype Thread Company was born from a simple idea:</strong> these stories deserve to be seen. We source authentic family photographs spanning the 1920s through the 1990s — real images of real Americans living real lives.</p>"
+          }
+        },
+        {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>We've expanded beyond our family archive to include rare vintage logos, union badges, and industrial marks from companies long forgotten. Designs from America's manufacturing era — the textile mills, the steel plants, the local businesses that once anchored every Main Street.</p>"
+          }
+        },
+        {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p><strong>Every design comes with its story documented.</strong> We believe clothing should mean something beyond fabric and thread. When you wear Tintype, you're not just wearing a shirt — you're carrying a piece of American history.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

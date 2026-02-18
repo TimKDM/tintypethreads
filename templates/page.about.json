@@ -1,1 +1,268 @@
-{"sections":{"hero":{"type":"hero","blocks":{"heading":{"type":"text","settings":{"text":"<h1>Our Story</h1>","width":"100%","max_width":"normal","alignment":"center","type_preset":"h1","font":"var(--font-primary--family)","font_size":"","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["heading"],"settings":{"link":"","open_in_new_tab":false,"media_type_1":"image","image_1":"shopify://shop_images/mens-casual-wear-bold-4-top.jpg","media_type_2":"image","content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"center","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"center","gap":16,"section_width":"full-width","section_height":"medium","section_height_custom":50,"color_scheme":"scheme-2","toggle_overlay":true,"overlay_color":"#00000057","overlay_style":"solid","gradient_direction":"to top","blurred_reflection":false,"reflection_opacity":75,"padding-block-start":48,"padding-block-end":48}},"main":{"type":"main-page","blocks":{"content":{"type":"page-content","settings":{}},"heading":{"type":"text","name":"Title","settings":{"text":"<h2>Tintype Threads</h2>","width":"100%","max_width":"narrow","alignment":"left","type_preset":"h2","font":"var(--font-primary--family)","font_size":"","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["heading","content"],"settings":{"content_direction":"column","gap":32,"color_scheme":"scheme-1","padding-block-start":64,"padding-block-end":80}}},"order":["hero","main"]}
+{
+  "sections": {
+    "page_hero": {
+      "type": "tintype-page-hero",
+      "settings": {
+        "badge_text": "About Tintype Thread Company",
+        "heading_line_1": "THE STORY BEHIND",
+        "heading_line_2": "THE THREAD",
+        "subtitle": "How a box of family photos became a mission to preserve working-class American history."
+      }
+    },
+    "origin_story": {
+      "type": "tintype-origin-story",
+      "blocks": {
+        "para_1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "In early 2026, I found a box of old photographs in my grandmother\u2019s attic.",
+            "lead": true
+          }
+        },
+        "para_2": {
+          "type": "paragraph",
+          "settings": {
+            "text": "Faces I\u2019d never met stared back at me \u2014 great-uncles in work clothes, cousins at county fairs, Sunday dinners with too many people crammed around the table. Some photos had names scrawled on the back. Most didn\u2019t.",
+            "lead": false
+          }
+        },
+        "para_3": {
+          "type": "paragraph",
+          "settings": {
+            "text": "These weren\u2019t famous people. They were factory workers, farmers, mothers, veterans. The backbone of America that never made the history books. Working-class families who built this country with their hands and never asked for credit.",
+            "lead": false
+          }
+        },
+        "para_4": {
+          "type": "paragraph",
+          "settings": {
+            "text": "I couldn\u2019t let them disappear. Their stories deserved more than a dusty album in an attic nobody visits.",
+            "lead": false
+          }
+        }
+      },
+      "block_order": ["para_1", "para_2", "para_3", "para_4"],
+      "settings": {
+        "caption": "The shoebox that started it all",
+        "heading": "IT STARTED WITH <span>A SHOEBOX</span>"
+      }
+    },
+    "quote": {
+      "type": "tintype-quote-block",
+      "settings": {
+        "quote": "These stories deserve to be seen. Not locked away in albums. Not forgotten in attics. Worn proudly, shared openly, preserved forever.",
+        "citation": "\u2014 The moment Tintype Thread Company was born",
+        "background": "tt-bg-cream"
+      }
+    },
+    "mission": {
+      "type": "tintype-mission",
+      "blocks": {
+        "mission_1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p><strong>Tintype Thread Company was born from a simple idea:</strong> these stories deserve to be seen. We source authentic family photographs spanning the 1920s through the 1990s \u2014 real images of real Americans living real lives.</p>"
+          }
+        },
+        "mission_2": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>We\u2019ve expanded beyond our family archive to include rare vintage logos, union badges, and industrial marks from companies long forgotten. Designs from America\u2019s manufacturing era \u2014 the textile mills, the steel plants, the local businesses that once anchored every Main Street.</p>"
+          }
+        },
+        "mission_3": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p><strong>Every design comes with its story documented.</strong> We believe clothing should mean something beyond fabric and thread. When you wear Tintype, you\u2019re not just wearing a shirt \u2014 you\u2019re carrying a piece of American history.</p>"
+          }
+        }
+      },
+      "block_order": ["mission_1", "mission_2", "mission_3"],
+      "settings": {
+        "heading": "PRESERVING HISTORY,<br><span>ONE SHIRT AT A TIME</span>"
+      }
+    },
+    "timeline": {
+      "type": "tintype-timeline",
+      "blocks": {
+        "event_1": {
+          "type": "event",
+          "settings": {
+            "year": "2026",
+            "title": "THE DISCOVERY",
+            "text": "Found a shoebox of family photographs spanning 70 years of American history. Faces without names, stories without endings."
+          }
+        },
+        "event_2": {
+          "type": "event",
+          "settings": {
+            "year": "2026",
+            "title": "THE IDEA",
+            "text": "What if these photos lived on something people actually wore? What if history was wearable? Tintype Thread Company was born."
+          }
+        },
+        "event_3": {
+          "type": "event",
+          "settings": {
+            "year": "2026",
+            "title": "FIRST COLLECTION",
+            "text": "Launched with four designs from our family archive. Each shirt printed on USA-made cotton, each photo with its story documented."
+          }
+        },
+        "event_4": {
+          "type": "event",
+          "settings": {
+            "year": "NOW",
+            "title": "EXPANDING THE ARCHIVE",
+            "text": "Now sourcing vintage logos, union badges, and industrial marks from America\u2019s manufacturing era. The archive grows."
+          }
+        }
+      },
+      "block_order": ["event_1", "event_2", "event_3", "event_4"],
+      "settings": {
+        "heading": "THE JOURNEY"
+      }
+    },
+    "process": {
+      "type": "tintype-process",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "number": "01",
+            "icon_svg": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><circle cx='11' cy='11' r='8'></circle><path d='m21 21-4.35-4.35'></path></svg>",
+            "title": "DISCOVER",
+            "text": "We source authentic photographs from family archives and hunt for rare vintage logos from America\u2019s industrial past."
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "number": "02",
+            "icon_svg": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'></path><polyline points='14 2 14 8 20 8'></polyline><line x1='16' y1='13' x2='8' y2='13'></line><line x1='16' y1='17' x2='8' y2='17'></line></svg>",
+            "title": "DOCUMENT",
+            "text": "Every image gets its story researched and recorded. Names, dates, places, occupations \u2014 we preserve what we can find."
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "number": "03",
+            "icon_svg": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='3' y='3' width='18' height='18' rx='2' ry='2'></rect><circle cx='8.5' cy='8.5' r='1.5'></circle><polyline points='21 15 16 10 5 21'></polyline></svg>",
+            "title": "RESTORE",
+            "text": "Careful digital restoration brings faded images back to life while preserving their authentic character and imperfections."
+          }
+        },
+        "step_4": {
+          "type": "step",
+          "settings": {
+            "number": "04",
+            "icon_svg": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z'></path><line x1='7' y1='7' x2='7.01' y2='7'></line></svg>",
+            "title": "CREATE",
+            "text": "Printed on premium USA-made cotton using quality methods that ensure the image lasts as long as the fabric."
+          }
+        }
+      },
+      "block_order": ["step_1", "step_2", "step_3", "step_4"],
+      "settings": {
+        "heading": "HOW WE WORK"
+      }
+    },
+    "founder": {
+      "type": "tintype-founder",
+      "blocks": {
+        "founder_1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "I grew up hearing stories about family members I never met \u2014 the uncle who worked the Pittsburgh steel mills, the grandmother who raised six kids during the Depression, the cousin who never came home from the war."
+          }
+        },
+        "founder_2": {
+          "type": "paragraph",
+          "settings": {
+            "text": "When I found that shoebox of photographs, I realized the stories were fading faster than the photos. Names were being forgotten. Faces were becoming strangers."
+          }
+        },
+        "founder_3": {
+          "type": "paragraph",
+          "settings": {
+            "text": "Tintype Thread Company is my way of making sure that doesn\u2019t happen. Not just for my family \u2014 for all the working-class American families whose stories deserve to be remembered."
+          }
+        }
+      },
+      "block_order": ["founder_1", "founder_2", "founder_3"],
+      "settings": {
+        "name": "THE FOUNDER",
+        "title": "Keeper of the Archive",
+        "background": "tt-bg-cream"
+      }
+    },
+    "values_dark": {
+      "type": "tintype-values-dark",
+      "blocks": {
+        "val_1": {
+          "type": "value",
+          "settings": {
+            "icon_letter": "A",
+            "title": "AUTHENTICITY",
+            "description": "Every photo is real. Every story is documented. No stock images, no manufactured heritage, no fake nostalgia. Just genuine American history from genuine American families."
+          }
+        },
+        "val_2": {
+          "type": "value",
+          "settings": {
+            "icon_letter": "Q",
+            "title": "QUALITY",
+            "description": "Premium fabrics, careful printing, made to last. We use USA-made cotton whenever possible and printing methods that ensure our designs survive years of wear and wash."
+          }
+        },
+        "val_3": {
+          "type": "value",
+          "settings": {
+            "icon_letter": "P",
+            "title": "PRESERVATION",
+            "description": "We\u2019re building an archive of working-class American history, one design at a time. These faces and stories survived decades in shoeboxes \u2014 now they\u2019ll survive on cotton."
+          }
+        }
+      },
+      "block_order": ["val_1", "val_2", "val_3"],
+      "settings": {
+        "heading": "WHAT WE STAND FOR",
+        "subtitle": "The principles that guide everything we do"
+      }
+    },
+    "cta": {
+      "type": "tintype-cta",
+      "settings": {
+        "heading": "HAVE PHOTOS <span>GATHERING DUST?</span>",
+        "text": "We\u2019re always looking for new stories to tell. If you have family photographs from the 1920s-1990s and want to see them preserved, we\u2019d love to hear from you.",
+        "button_label_1": "SUBMIT YOUR PHOTOS",
+        "button_link_1": "",
+        "button_label_2": "SHOP THE COLLECTION",
+        "button_link_2": "shopify://collections/all"
+      }
+    },
+    "newsletter": {
+      "type": "tintype-newsletter",
+      "settings": {
+        "heading": "JOIN THE ARCHIVE",
+        "description": "Get first access to new designs, the stories behind them, and 10% off your first order.",
+        "placeholder": "Enter your email",
+        "button_label": "SUBSCRIBE",
+        "note": "We respect your inbox. Unsubscribe anytime."
+      }
+    }
+  },
+  "order": [
+    "page_hero",
+    "origin_story",
+    "quote",
+    "mission",
+    "timeline",
+    "process",
+    "founder",
+    "values_dark",
+    "cta",
+    "newsletter"
+  ]
+}
