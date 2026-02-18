@@ -24,6 +24,8 @@
       >
     {% endif %}
 
+    <meta name="description" content="Tintype Threads — Heritage-inspired streetwear rooted in the craft and character of vintage Americana.">
+
     {%- render 'meta-tags' -%}
     {%- render 'stylesheets' -%}
     {%- render 'fonts' -%}
@@ -36,6 +38,17 @@
     {% endif %}
 
     {{ content_for_header }}
+
+    <style>
+      /* Tintype Threads — Brand Overrides */
+      :root {
+        --brand-sepia: #4A3728;
+        --brand-dark: #1A1611;
+        --brand-cream: #FAFAF7;
+        --brand-tan: #E8C9A0;
+        --brand-warm: #D4C4B0;
+      }
+    </style>
   </head>
 
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
