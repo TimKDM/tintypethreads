@@ -1,0 +1,100 @@
+<section class="tt-values" id="TintypeValues-{{ section.id }}">
+  <div class="tt-section-header">
+    {%- if section.settings.label != blank -%}
+      <span class="tt-section-label">{{ section.settings.label }}</span>
+    {%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h2 class="tt-section-title">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+  </div>
+
+  <div class="tt-values__grid">
+    {%- for block in section.blocks -%}
+      <div class="tt-value-card tt-fade-in" {{ block.shopify_attributes }}>
+        <div class="tt-value-card__icon">{{ block.settings.icon_letter }}</div>
+        <h3 class="tt-value-card__title">{{ block.settings.title }}</h3>
+        <p class="tt-value-card__desc">{{ block.settings.description }}</p>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Tintype Values",
+  "tag": "section",
+  "class": "tt-values-wrapper section-wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Section label",
+      "default": "What We Stand For"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "OUR VALUES"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "value",
+      "name": "Value",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon_letter",
+          "label": "Icon letter",
+          "default": "A"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "AUTHENTICITY"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Every photo is real. Every story is documented. No stock images, no manufactured heritage. Just real American history."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tintype Values",
+      "category": "Tintype",
+      "blocks": [
+        {
+          "type": "value",
+          "settings": {
+            "icon_letter": "A",
+            "title": "AUTHENTICITY",
+            "description": "Every photo is real. Every story is documented. No stock images, no manufactured heritage. Just real American history."
+          }
+        },
+        {
+          "type": "value",
+          "settings": {
+            "icon_letter": "Q",
+            "title": "QUALITY",
+            "description": "Premium fabrics, careful printing, made to last. We use USA-made cotton whenever possible because shortcuts aren't in our vocabulary."
+          }
+        },
+        {
+          "type": "value",
+          "settings": {
+            "icon_letter": "P",
+            "title": "PRESERVATION",
+            "description": "We're building an archive of working-class American history, one design at a time. These stories deserve to survive."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

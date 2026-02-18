@@ -1,1 +1,181 @@
-{"sections":{"hero_main":{"type":"hero","blocks":{"group_hero":{"type":"group","name":"Hero Content","settings":{"link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"flex-end","gap":16,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"heading":{"type":"text","settings":{"text":"<h1>Wear the past. Own the future.</h1>","width":"100%","max_width":"normal","alignment":"left","type_preset":"h1","font":"var(--font-primary--family)","font_size":"","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"subtext":{"type":"text","name":"Subtext","settings":{"text":"<p>Heritage-inspired streetwear rooted in the craft and character of vintage Americana. Every thread tells a story.</p>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"custom","font":"var(--font-primary--family)","font_size":"1.25rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"cta":{"type":"button","name":"Shop CTA","settings":{"label":"Shop the collection","link":"shopify://collections/all","open_in_new_tab":false,"style_class":"button","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["heading","subtext","cta"]}},"block_order":["group_hero"],"name":"Hero","settings":{"link":"","open_in_new_tab":false,"media_type_1":"image","image_1":"shopify://shop_images/mens-casual-wear-bold-2-middle.jpg","media_type_2":"image","content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"flex-end","gap":0,"section_width":"page-width","section_height":"large","section_height_custom":5,"color_scheme":"scheme-2","toggle_overlay":true,"overlay_color":"#0303037d","overlay_style":"gradient","gradient_direction":"to top","blurred_reflection":false,"reflection_opacity":75,"padding-block-start":24,"padding-block-end":64}},"featured_products":{"type":"product-list","disabled":false,"blocks":{"static-header":{"type":"_product-list-content","name":"Header","static":true,"settings":{"content_direction":"row","vertical_on_mobile":false,"horizontal_alignment":"space-between","vertical_alignment":"flex-end","align_baseline":true,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"title":{"type":"_product-list-text","name":"Collection Title","settings":{"text":"<h3>New arrivals</h3>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"rte","font":"var(--font-body--family)","font_size":"","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"view_all":{"type":"_product-list-button","name":"View All","settings":{"label":"View all","link":"shopify://collections/all","open_in_new_tab":false,"style_class":"link","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["title","view_all"]},"static-product-card":{"type":"_product-card","name":"Product Card","static":true,"settings":{"product_card_gap":8,"inherit_color_scheme":true,"color_scheme":"","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"gallery":{"type":"_product-card-gallery","name":"Gallery","settings":{"image_ratio":"portrait","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"info":{"type":"_product-card-group","name":"Info","settings":{"link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":0,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"product_title":{"type":"text","name":"Product Title","settings":{"text":"<h5>{{ closest.product.title }}</h5>","width":"100%","max_width":"normal","alignment":"left","type_preset":"custom","font":"var(--font-body--family)","font_size":"1.5rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"balance","color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"price":{"type":"price","name":"Price","settings":{"product":"{{ closest.product }}","show_sale_price_first":true,"show_installments":false,"show_tax_info":false,"type_preset":"paragraph","width":"100%","alignment":"left","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","color":"var(--color-foreground)","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"swatches":{"type":"swatches","name":"Swatches","settings":{"product":"{{ closest.product }}","product_swatches_alignment":"flex-start","product_swatches_alignment_mobile":"flex-start","hide_padding":false,"product_swatches_padding_top":4,"product_swatches_padding_bottom":0,"product_swatches_padding_left":0,"product_swatches_padding_right":0},"blocks":{}}},"block_order":["product_title","price","swatches"]}},"block_order":["gallery","info"]}},"name":"Featured Products","settings":{"collection":"mens-casual-wear-example-products","layout_type":"grid","carousel_on_mobile":false,"max_products":4,"columns":4,"mobile_columns":"2","columns_gap":20,"rows_gap":36,"icons_style":"arrow","icons_shape":"none","section_width":"page-width","horizontal_alignment":"flex-start","gap":28,"color_scheme":"scheme-1","padding-block-start":72,"padding-block-end":72}},"brand_story":{"type":"hero","blocks":{"quote":{"type":"text","settings":{"text":"<p>Born from a love of vintage photography and American craftsmanship, Tintype Threads bridges the gap between heritage style and modern streetwear.</p>","width":"fit-content","max_width":"narrow","alignment":"left","type_preset":"h3","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground-heading)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["quote"],"name":"Brand Story","settings":{"link":"shopify://pages/about","open_in_new_tab":false,"media_type_1":"image","image_1":"shopify://shop_images/mens-casual-wear-bold-4-top.jpg","media_type_2":"image","content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"space-between","vertical_alignment":"flex-end","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"space-between","gap":16,"section_width":"page-width","section_height":"large","section_height_custom":50,"color_scheme":"scheme-4","toggle_overlay":true,"overlay_color":"#00000057","overlay_style":"gradient","gradient_direction":"to bottom","blurred_reflection":false,"reflection_opacity":75,"padding-block-start":72,"padding-block-end":72}},"mission_section":{"type":"section","blocks":{"label":{"type":"text","name":"Label","settings":{"text":"<p>Our story</p>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"uppercase","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"mission_text":{"type":"text","settings":{"text":"<p>We believe clothing should carry meaning. Tintype Threads draws from the textures, tones, and spirit of early American workwear and photography to create pieces that feel both timeless and modern. Every garment is designed with intention — honoring the past while moving forward.</p>","width":"100%","max_width":"narrow","alignment":"left","type_preset":"h2","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"about_link":{"type":"button","settings":{"label":"Learn more about us","link":"shopify://pages/about","open_in_new_tab":false,"style_class":"link","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["label","mission_text","about_link"],"name":"Mission","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"center","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"space-between","gap":12,"section_width":"page-width","section_height":"medium","section_height_custom":50,"color_scheme":"scheme-1","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":80,"padding-block-end":80}},"lookbook_grid":{"type":"section","blocks":{"img_left":{"type":"group","name":"Left Image","settings":{"link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fill","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"image","video_position":"cover","background_image":"shopify://shop_images/mens-casual-wear-bold-5-top.jpg","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"img_center":{"type":"group","name":"Center Image","settings":{"link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fill","custom_height":100,"inherit_color_scheme":true,"color_scheme":"","background_media":"image","video_position":"cover","background_image":"shopify://shop_images/mens-casual-wear-bold-1-middle.jpg","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"cta_panel":{"type":"group","name":"CTA Panel","settings":{"link":"","open_in_new_tab":false,"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"space-between","gap":12,"width":"custom","custom_width":30,"width_mobile":"fill","custom_width_mobile":100,"height":"fill","custom_height":100,"inherit_color_scheme":false,"color_scheme":"scheme-4","background_media":"none","video_position":"cover","background_image":"shopify://shop_images/mens-casual-wear-bold-3-top.jpg","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":60,"padding-block-end":60,"padding-inline-start":60,"padding-inline-end":60},"blocks":{"cta_heading":{"type":"text","name":"Heading","settings":{"text":"<h3>Each piece connects you to a tradition of quality and authenticity.</h3>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"rte","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","color":"var(--color-foreground)","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"cta_button":{"type":"button","name":"Button","settings":{"label":"Shop all","link":"shopify://collections/all","open_in_new_tab":false,"style_class":"button-secondary","width":"fit-content","custom_width":100,"width_mobile":"fit-content","custom_width_mobile":100},"blocks":{}}},"block_order":["cta_heading","cta_button"]}},"block_order":["img_left","img_center","cta_panel"],"name":"Lookbook Grid","settings":{"content_direction":"row","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":0,"section_width":"full-width","section_height":"medium","section_height_custom":50,"color_scheme":"","background_media":"none","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_radius":0,"toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","padding-block-start":0,"padding-block-end":0}}},"order":["hero_main","featured_products","brand_story","mission_section","lookbook_grid"]}
+{
+  "sections": {
+    "tintype_hero": {
+      "type": "tintype-hero",
+      "settings": {
+        "badge_text": "Authentic American Heritage Since 2026",
+        "heading_line_1": "WEAR THE",
+        "heading_line_2": "STORY",
+        "tagline": "Vintage American apparel featuring real family photographs and forgotten heritage designs. Every shirt has a story. Every story deserves to be worn.",
+        "button_label_1": "SHOP THE COLLECTION",
+        "button_link_1": "shopify://collections/all",
+        "button_label_2": "OUR STORY",
+        "button_link_2": ""
+      }
+    },
+    "brand_statement": {
+      "type": "tintype-brand-statement",
+      "settings": {
+        "text": "<p><strong>Every shirt tells a story.<\/strong> Our designs come from real family photographs spanning the 1920s-1990s and rare vintage logos from America's industrial era. This isn't manufactured nostalgia — <strong>it's history you can wear.<\/strong><\/p>"
+      }
+    },
+    "featured_products": {
+      "type": "tintype-featured-products",
+      "blocks": {
+        "product_1": {
+          "type": "placeholder_product",
+          "settings": {
+            "era": "1952",
+            "title": "THE FOREMAN TEE",
+            "story": "Carl made foreman at J&L Steel. Pittsburgh never forgot.",
+            "price": "$38.00"
+          }
+        },
+        "product_2": {
+          "type": "placeholder_product",
+          "settings": {
+            "era": "1947",
+            "title": "SUNDAY DINNER TEE",
+            "story": "The Miller family. Twelve people. One table. Every Sunday.",
+            "price": "$38.00"
+          }
+        },
+        "product_3": {
+          "type": "placeholder_product",
+          "settings": {
+            "era": "1923",
+            "title": "UNION LOCAL 47",
+            "story": "A badge from a union that built this country.",
+            "price": "$36.00"
+          }
+        },
+        "product_4": {
+          "type": "placeholder_product",
+          "settings": {
+            "era": "1968",
+            "title": "THE ROAD TRIP TEE",
+            "story": "Route 66. A station wagon. Five kids. One summer.",
+            "price": "$38.00"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "label": "New Arrivals",
+        "heading": "THE COLLECTION",
+        "products_to_show": 4
+      }
+    },
+    "story": {
+      "type": "tintype-story",
+      "blocks": {
+        "paragraph_1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "Tintype Thread Company started with a box of family photographs. Working-class Americans from the 1920s through the 1990s \u2014 factory workers, farmers, families at Sunday dinner. Their faces deserved more than a dusty album."
+          }
+        },
+        "paragraph_2": {
+          "type": "paragraph",
+          "settings": {
+            "text": "We\u2019ve expanded to include rare vintage logos and designs from America\u2019s industrial past \u2014 marks from companies long forgotten, badges from unions that built this country, graphics that tell the story of American labor."
+          }
+        },
+        "paragraph_3": {
+          "type": "paragraph",
+          "settings": {
+            "text": "Every design comes with its story. Because clothing should mean something."
+          }
+        },
+        "story_button": {
+          "type": "button",
+          "settings": {
+            "label": "READ OUR FULL STORY",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["paragraph_1", "paragraph_2", "paragraph_3", "story_button"],
+      "settings": {
+        "heading": "REAL PHOTOS.<br><span>LOST LOGOS.</span><br>FORGOTTEN STORIES."
+      }
+    },
+    "collections": {
+      "type": "tintype-collections-grid",
+      "blocks": {
+        "collection_1": {
+          "type": "collection_card",
+          "settings": {
+            "title": "HERITAGE PHOTOS",
+            "subtitle": "12 DESIGNS \u2022 1920s-1990s"
+          }
+        },
+        "collection_2": {
+          "type": "collection_card",
+          "settings": {
+            "title": "LOST MARKS",
+            "subtitle": "8 DESIGNS \u2022 1880s-1950s"
+          }
+        }
+      },
+      "block_order": ["collection_1", "collection_2"],
+      "settings": {
+        "label": "Browse By",
+        "heading": "COLLECTIONS"
+      }
+    },
+    "values": {
+      "type": "tintype-values",
+      "blocks": {
+        "value_1": {
+          "type": "value",
+          "settings": {
+            "icon_letter": "A",
+            "title": "AUTHENTICITY",
+            "description": "Every photo is real. Every story is documented. No stock images, no manufactured heritage. Just real American history."
+          }
+        },
+        "value_2": {
+          "type": "value",
+          "settings": {
+            "icon_letter": "Q",
+            "title": "QUALITY",
+            "description": "Premium fabrics, careful printing, made to last. We use USA-made cotton whenever possible because shortcuts aren\u2019t in our vocabulary."
+          }
+        },
+        "value_3": {
+          "type": "value",
+          "settings": {
+            "icon_letter": "P",
+            "title": "PRESERVATION",
+            "description": "We\u2019re building an archive of working-class American history, one design at a time. These stories deserve to survive."
+          }
+        }
+      },
+      "block_order": ["value_1", "value_2", "value_3"],
+      "settings": {
+        "label": "What We Stand For",
+        "heading": "OUR VALUES"
+      }
+    },
+    "newsletter": {
+      "type": "tintype-newsletter",
+      "settings": {
+        "heading": "JOIN THE ARCHIVE",
+        "description": "Get first access to new designs, the stories behind them, and 10% off your first order.",
+        "placeholder": "Enter your email",
+        "button_label": "SUBSCRIBE",
+        "note": "We respect your inbox. Unsubscribe anytime."
+      }
+    }
+  },
+  "order": [
+    "tintype_hero",
+    "brand_statement",
+    "featured_products",
+    "story",
+    "collections",
+    "values",
+    "newsletter"
+  ]
+}

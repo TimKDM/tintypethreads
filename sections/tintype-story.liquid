@@ -1,0 +1,126 @@
+<section class="tt-story" id="TintypeStory-{{ section.id }}">
+  <div class="tt-story__grid">
+    <div class="tt-story__image">
+      {%- if section.settings.image != blank -%}
+        {{
+          section.settings.image
+          | image_url: width: 1200
+          | image_tag:
+            width: section.settings.image.width,
+            height: section.settings.image.height,
+            alt: section.settings.image.alt,
+            sizes: '(min-width: 1024px) 50vw, 100vw',
+            widths: '400, 600, 800, 1200',
+            loading: 'lazy'
+        }}
+      {%- else -%}
+        <div class="tt-story__image-placeholder">
+          <span>[ Vintage Family Photo ]</span>
+        </div>
+      {%- endif -%}
+    </div>
+    <div class="tt-story__content">
+      {%- if section.settings.heading != blank -%}
+        <h2>{{ section.settings.heading }}</h2>
+      {%- endif -%}
+
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'paragraph' -%}
+            <p {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+          {%- when 'button' -%}
+            {%- if block.settings.label != blank -%}
+              <a href="{{ block.settings.link }}" class="tt-btn tt-btn-outline" {{ block.shopify_attributes }}>
+                {{ block.settings.label }}
+              </a>
+            {%- endif -%}
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Tintype Story",
+  "tag": "section",
+  "class": "tt-story-wrapper section-wrapper",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Story image"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading (HTML supported)",
+      "default": "REAL PHOTOS.<br><span>LOST LOGOS.</span><br>FORGOTTEN STORIES."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "name": "Paragraph",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Tintype Thread Company started with a box of family photographs."
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "READ OUR FULL STORY"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tintype Story",
+      "category": "Tintype",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "settings": {
+            "text": "Tintype Thread Company started with a box of family photographs. Working-class Americans from the 1920s through the 1990s — factory workers, farmers, families at Sunday dinner. Their faces deserved more than a dusty album."
+          }
+        },
+        {
+          "type": "paragraph",
+          "settings": {
+            "text": "We've expanded to include rare vintage logos and designs from America's industrial past — marks from companies long forgotten, badges from unions that built this country, graphics that tell the story of American labor."
+          }
+        },
+        {
+          "type": "paragraph",
+          "settings": {
+            "text": "Every design comes with its story. Because clothing should mean something."
+          }
+        },
+        {
+          "type": "button",
+          "settings": {
+            "label": "READ OUR FULL STORY"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
