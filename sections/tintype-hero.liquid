@@ -1,0 +1,122 @@
+<section class="tt-hero" id="TintypeHero-{{ section.id }}">
+  <div class="tt-hero__bg">
+    {%- if section.settings.image != blank -%}
+      {{
+        section.settings.image
+        | image_url: width: 3840
+        | image_tag:
+          width: section.settings.image.width,
+          height: section.settings.image.height,
+          alt: section.settings.image.alt,
+          sizes: '100vw',
+          widths: '832, 1200, 1600, 1920, 2560, 3840',
+          fetchpriority: 'high'
+      }}
+    {%- endif -%}
+    <div class="tt-hero__bg-overlay"></div>
+    <div class="tt-hero__bg-pattern"></div>
+  </div>
+
+  <div class="tt-hero__content">
+    {%- if section.settings.badge_text != blank -%}
+      <div class="tt-hero__badge">{{ section.settings.badge_text }}</div>
+    {%- endif -%}
+
+    <h1 class="tt-hero__heading">
+      {{ section.settings.heading_line_1 }}
+      {%- if section.settings.heading_line_2 != blank -%}
+        <span>{{ section.settings.heading_line_2 }}</span>
+      {%- endif -%}
+    </h1>
+
+    {%- if section.settings.tagline != blank -%}
+      <p class="tt-hero__tagline">{{ section.settings.tagline }}</p>
+    {%- endif -%}
+
+    <div class="tt-hero__buttons">
+      {%- if section.settings.button_label_1 != blank -%}
+        <a href="{{ section.settings.button_link_1 }}" class="tt-btn tt-btn-primary">
+          {{ section.settings.button_label_1 }}
+        </a>
+      {%- endif -%}
+      {%- if section.settings.button_label_2 != blank -%}
+        <a href="{{ section.settings.button_link_2 }}" class="tt-btn tt-btn-outline">
+          {{ section.settings.button_label_2 }}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="tt-hero__scroll">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 5v14M19 12l-7 7-7-7"/>
+    </svg>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Tintype Hero",
+  "tag": "section",
+  "class": "tt-hero-wrapper section-wrapper",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge text",
+      "default": "Authentic American Heritage Since 2026"
+    },
+    {
+      "type": "text",
+      "id": "heading_line_1",
+      "label": "Heading line 1",
+      "default": "WEAR THE"
+    },
+    {
+      "type": "text",
+      "id": "heading_line_2",
+      "label": "Heading line 2 (accent color)",
+      "default": "STORY"
+    },
+    {
+      "type": "textarea",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Vintage American apparel featuring real family photographs and forgotten heritage designs. Every shirt has a story. Every story deserves to be worn."
+    },
+    {
+      "type": "text",
+      "id": "button_label_1",
+      "label": "Primary button label",
+      "default": "SHOP THE COLLECTION"
+    },
+    {
+      "type": "url",
+      "id": "button_link_1",
+      "label": "Primary button link"
+    },
+    {
+      "type": "text",
+      "id": "button_label_2",
+      "label": "Secondary button label",
+      "default": "OUR STORY"
+    },
+    {
+      "type": "url",
+      "id": "button_link_2",
+      "label": "Secondary button link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tintype Hero",
+      "category": "Tintype"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,807 @@
+/* ==========================================================================
+   Tintype Thread Co. — Base Styles
+   Heritage American Apparel Brand
+   ========================================================================== */
+
+:root {
+  --tt-aged-black: #1a1a1a;
+  --tt-warm-cream: #f5f0e6;
+  --tt-heritage-navy: #1e3a5f;
+  --tt-rust-red: #8b3a3a;
+  --tt-sepia-tan: #d4c4a8;
+  --tt-faded-indigo: #4a5568;
+  --tt-antique-white: #faf8f5;
+  --tt-paper-texture: #efe9dc;
+}
+
+/* Noise texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.03;
+  z-index: 1000;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* ==========================================================================
+   Typography — Mono Utility
+   ========================================================================== */
+
+.tt-mono {
+  font-family: 'JetBrains Mono', 'Anonymous Pro', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.tt-btn {
+  display: inline-block;
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  padding: 16px 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.tt-btn-primary {
+  background: var(--tt-rust-red);
+  color: var(--tt-warm-cream);
+}
+
+.tt-btn-primary:hover {
+  background: var(--tt-heritage-navy);
+  transform: translateY(-2px);
+}
+
+.tt-btn-outline {
+  background: transparent;
+  color: var(--tt-warm-cream);
+  border: 1px solid var(--tt-warm-cream);
+}
+
+.tt-btn-outline:hover {
+  background: var(--tt-warm-cream);
+  color: var(--tt-aged-black);
+}
+
+/* ==========================================================================
+   Section Headers
+   ========================================================================== */
+
+.tt-section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.tt-section-label {
+  display: inline-block;
+  border: 1px solid var(--tt-sepia-tan);
+  padding: 6px 15px;
+  margin-bottom: 15px;
+  color: var(--tt-faded-indigo);
+  font-family: 'JetBrains Mono', 'Anonymous Pro', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tt-section-title {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--tt-aged-black);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.tt-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: var(--tt-aged-black);
+  overflow: hidden;
+}
+
+.tt-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.tt-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tt-hero__bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(26,26,26,0.3) 0%, rgba(26,26,26,0.8) 100%);
+  z-index: 1;
+}
+
+.tt-hero__bg-pattern {
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4c4a8' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.9;
+  z-index: 2;
+}
+
+.tt-hero__content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 40px;
+  max-width: 900px;
+  animation: ttFadeUp 1s ease-out;
+}
+
+@keyframes ttFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tt-hero__badge {
+  display: inline-block;
+  border: 1px solid var(--tt-sepia-tan);
+  padding: 8px 20px;
+  margin-bottom: 30px;
+  color: var(--tt-sepia-tan);
+  font-family: 'JetBrains Mono', 'Anonymous Pro', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: ttFadeUp 1s ease-out 0.2s both;
+}
+
+.tt-hero__heading {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: clamp(3.5rem, 12vw, 9rem);
+  color: var(--tt-warm-cream);
+  line-height: 0.9;
+  margin-bottom: 20px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  animation: ttFadeUp 1s ease-out 0.3s both;
+}
+
+.tt-hero__heading span {
+  display: block;
+  color: var(--tt-rust-red);
+}
+
+.tt-hero__tagline {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.1rem;
+  color: var(--tt-sepia-tan);
+  max-width: 500px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+  animation: ttFadeUp 1s ease-out 0.4s both;
+}
+
+.tt-hero__buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: ttFadeUp 1s ease-out 0.5s both;
+}
+
+.tt-hero__scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--tt-sepia-tan);
+  animation: ttBounce 2s infinite;
+  z-index: 3;
+}
+
+@keyframes ttBounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-10px); }
+  60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* ==========================================================================
+   Brand Statement Section
+   ========================================================================== */
+
+.tt-brand-statement {
+  padding: 100px 40px;
+  text-align: center;
+  background: var(--tt-warm-cream);
+  position: relative;
+}
+
+.tt-brand-statement::before {
+  content: '\201C';
+  font-family: Georgia, serif;
+  font-size: 15rem;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--tt-sepia-tan);
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.tt-brand-statement__text {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1.4rem;
+  line-height: 2;
+  color: var(--tt-faded-indigo);
+  position: relative;
+  z-index: 1;
+}
+
+.tt-brand-statement__text strong {
+  color: var(--tt-aged-black);
+}
+
+/* ==========================================================================
+   Featured Products Section
+   ========================================================================== */
+
+.tt-products {
+  padding: 100px 40px;
+  background: var(--tt-antique-white);
+}
+
+.tt-products__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tt-product-card {
+  background: var(--tt-warm-cream);
+  border: 1px solid var(--tt-sepia-tan);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.tt-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(26,26,26,0.1);
+}
+
+.tt-product-card__image {
+  aspect-ratio: 1;
+  background: var(--tt-paper-texture);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.tt-product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tt-product-card__image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  z-index: 1;
+}
+
+.tt-product-card:hover .tt-product-card__image::before {
+  transform: translateX(100%);
+}
+
+.tt-product-card__era {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--tt-aged-black);
+  color: var(--tt-warm-cream);
+  padding: 5px 12px;
+  font-family: 'JetBrains Mono', 'Anonymous Pro', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  z-index: 2;
+}
+
+.tt-product-card__info {
+  padding: 25px;
+  border-top: 1px solid var(--tt-sepia-tan);
+}
+
+.tt-product-card__name {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: var(--tt-aged-black);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.tt-product-card__story {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 0.9rem;
+  color: var(--tt-faded-indigo);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.tt-product-card__price {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 1.3rem;
+  color: var(--tt-rust-red);
+  letter-spacing: 0.05em;
+}
+
+.tt-product-card__tag {
+  display: inline-block;
+  background: var(--tt-heritage-navy);
+  color: var(--tt-warm-cream);
+  padding: 3px 8px;
+  font-family: 'JetBrains Mono', 'Anonymous Pro', monospace;
+  font-size: 0.6rem;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.tt-product-card__placeholder {
+  width: 60%;
+  height: 60%;
+  background: var(--tt-sepia-tan);
+  opacity: 0.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', 'Anonymous Pro', monospace;
+  font-size: 0.7rem;
+  color: var(--tt-aged-black);
+}
+
+/* ==========================================================================
+   Story Section
+   ========================================================================== */
+
+.tt-story {
+  padding: 120px 40px;
+  background: var(--tt-aged-black);
+  color: var(--tt-warm-cream);
+}
+
+.tt-story__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.tt-story__image {
+  aspect-ratio: 4/5;
+  position: relative;
+  overflow: hidden;
+}
+
+.tt-story__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tt-story__image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--tt-sepia-tan);
+  margin: 20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tt-story__image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--tt-faded-indigo) 0%, var(--tt-aged-black) 100%);
+}
+
+.tt-story__image-placeholder span {
+  font-family: 'JetBrains Mono', 'Anonymous Pro', monospace;
+  font-size: 0.7rem;
+  color: var(--tt-sepia-tan);
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.tt-story__content h2 {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 30px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.tt-story__content h2 span {
+  color: var(--tt-rust-red);
+}
+
+.tt-story__content p {
+  font-family: 'Source Serif 4', Georgia, serif;
+  color: var(--tt-sepia-tan);
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.tt-story__content .tt-btn {
+  margin-top: 20px;
+}
+
+/* ==========================================================================
+   Collections Grid Section
+   ========================================================================== */
+
+.tt-collections {
+  padding: 100px 40px;
+  background: var(--tt-warm-cream);
+}
+
+.tt-collections__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tt-collection-card {
+  aspect-ratio: 16/10;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--tt-sepia-tan);
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.tt-collection-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 30%, rgba(26,26,26,0.9) 100%);
+  z-index: 1;
+  transition: opacity 0.3s;
+}
+
+.tt-collection-card:hover::before {
+  opacity: 0.8;
+}
+
+.tt-collection-card__bg {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.6s ease;
+}
+
+.tt-collection-card__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tt-collection-card__bg-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--tt-paper-texture);
+}
+
+.tt-collection-card:hover .tt-collection-card__bg {
+  transform: scale(1.05);
+}
+
+.tt-collection-card__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  z-index: 2;
+}
+
+.tt-collection-card__name {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 2rem;
+  color: var(--tt-warm-cream);
+  margin-bottom: 5px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.tt-collection-card__count {
+  font-family: 'JetBrains Mono', 'Anonymous Pro', monospace;
+  font-size: 0.7rem;
+  color: var(--tt-sepia-tan);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Values Section
+   ========================================================================== */
+
+.tt-values {
+  padding: 100px 40px;
+  background: var(--tt-antique-white);
+}
+
+.tt-values__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tt-value-card {
+  text-align: center;
+  padding: 40px 30px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tt-value-card:hover {
+  border-color: var(--tt-sepia-tan);
+  background: var(--tt-warm-cream);
+}
+
+.tt-value-card__icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 25px;
+  border: 2px solid var(--tt-aged-black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 1.5rem;
+  color: var(--tt-rust-red);
+}
+
+.tt-value-card__title {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--tt-aged-black);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.tt-value-card__desc {
+  font-family: 'Source Serif 4', Georgia, serif;
+  color: var(--tt-faded-indigo);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   Newsletter Section
+   ========================================================================== */
+
+.tt-newsletter {
+  padding: 100px 40px;
+  background: var(--tt-heritage-navy);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.tt-newsletter::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm20 20v20H0V20h20zm20 0v20H20V20h20zM20 0v20H0V0h20zm20 0v20H20V0h20z' fill='%23fff' fill-opacity='0.02'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.tt-newsletter__content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tt-newsletter__heading {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: var(--tt-warm-cream);
+  margin-bottom: 15px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.tt-newsletter__desc {
+  font-family: 'Source Serif 4', Georgia, serif;
+  color: var(--tt-sepia-tan);
+  margin-bottom: 35px;
+  font-size: 1.05rem;
+}
+
+.tt-newsletter__form {
+  display: flex;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.tt-newsletter__input {
+  flex: 1;
+  padding: 16px 20px;
+  border: 1px solid var(--tt-sepia-tan);
+  background: transparent;
+  color: var(--tt-warm-cream);
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 1rem;
+}
+
+.tt-newsletter__input::placeholder {
+  color: var(--tt-sepia-tan);
+  opacity: 0.7;
+}
+
+.tt-newsletter__input:focus {
+  outline: none;
+  border-color: var(--tt-warm-cream);
+}
+
+.tt-newsletter__note {
+  margin-top: 20px;
+  font-size: 0.75rem;
+  color: var(--tt-sepia-tan);
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   Footer Overrides
+   ========================================================================== */
+
+.tt-footer {
+  background: var(--tt-aged-black);
+  color: var(--tt-warm-cream);
+}
+
+/* ==========================================================================
+   Fade-in Animation
+   ========================================================================== */
+
+.tt-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.tt-fade-in.tt-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .tt-story__grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .tt-story__image {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .tt-values__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tt-hero__content {
+    padding: 20px;
+  }
+
+  .tt-hero__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tt-btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .tt-brand-statement {
+    padding: 60px 20px;
+  }
+
+  .tt-brand-statement__text {
+    font-size: 1.15rem;
+  }
+
+  .tt-products,
+  .tt-collections,
+  .tt-values,
+  .tt-story {
+    padding: 60px 20px;
+  }
+
+  .tt-collections__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tt-newsletter__form {
+    flex-direction: column;
+  }
+}

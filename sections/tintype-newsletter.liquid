@@ -1,0 +1,77 @@
+<section class="tt-newsletter" id="TintypeNewsletter-{{ section.id }}">
+  <div class="tt-newsletter__content">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="tt-newsletter__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    {%- if section.settings.description != blank -%}
+      <p class="tt-newsletter__desc">{{ section.settings.description }}</p>
+    {%- endif -%}
+
+    {% form 'customer', class: 'tt-newsletter__form' %}
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <input
+        type="email"
+        name="contact[email]"
+        class="tt-newsletter__input"
+        placeholder="{{ section.settings.placeholder | default: 'Enter your email' }}"
+        required
+        autocomplete="email"
+        aria-label="{{ section.settings.placeholder | default: 'Enter your email' }}"
+      >
+      <button type="submit" class="tt-btn tt-btn-primary">
+        {{ section.settings.button_label | default: 'SUBSCRIBE' }}
+      </button>
+    {% endform %}
+
+    {%- if section.settings.note != blank -%}
+      <p class="tt-newsletter__note">{{ section.settings.note }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Tintype Newsletter",
+  "tag": "section",
+  "class": "tt-newsletter-wrapper section-wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "JOIN THE ARCHIVE"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Get first access to new designs, the stories behind them, and 10% off your first order."
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Input placeholder",
+      "default": "Enter your email"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "SUBSCRIBE"
+    },
+    {
+      "type": "text",
+      "id": "note",
+      "label": "Note text",
+      "default": "We respect your inbox. Unsubscribe anytime."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tintype Newsletter",
+      "category": "Tintype"
+    }
+  ]
+}
+{% endschema %}

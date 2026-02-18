@@ -1,0 +1,191 @@
+<section class="tt-products" id="TintypeProducts-{{ section.id }}">
+  <div class="tt-section-header">
+    {%- if section.settings.label != blank -%}
+      <span class="tt-section-label">{{ section.settings.label }}</span>
+    {%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h2 class="tt-section-title">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+  </div>
+
+  <div class="tt-products__grid">
+    {%- if section.settings.collection != blank -%}
+      {%- assign collection = section.settings.collection -%}
+      {%- for product in collection.products limit: section.settings.products_to_show -%}
+        <a href="{{ product.url }}" class="tt-product-card tt-fade-in">
+          <div class="tt-product-card__image">
+            {%- if product.metafields.custom.era != blank -%}
+              <span class="tt-product-card__era">{{ product.metafields.custom.era }}</span>
+            {%- elsif product.tags.size > 0 -%}
+              {%- for tag in product.tags -%}
+                {%- if tag contains 'era:' -%}
+                  <span class="tt-product-card__era">{{ tag | remove: 'era:' }}</span>
+                  {%- break -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+            {%- if product.featured_image != blank -%}
+              {{
+                product.featured_image
+                | image_url: width: 800
+                | image_tag:
+                  width: product.featured_image.width,
+                  height: product.featured_image.height,
+                  alt: product.title,
+                  sizes: '(min-width: 1200px) 280px, (min-width: 768px) 33vw, 100vw',
+                  widths: '280, 400, 560, 800',
+                  loading: 'lazy'
+              }}
+            {%- else -%}
+              <div class="tt-product-card__placeholder">[ PRODUCT IMAGE ]</div>
+            {%- endif -%}
+          </div>
+          <div class="tt-product-card__info">
+            <h3 class="tt-product-card__name">{{ product.title }}</h3>
+            {%- if product.metafields.custom.story != blank -%}
+              <p class="tt-product-card__story">{{ product.metafields.custom.story }}</p>
+            {%- elsif product.description != blank -%}
+              <p class="tt-product-card__story">{{ product.description | strip_html | truncate: 80 }}</p>
+            {%- endif -%}
+            <div class="tt-product-card__price">
+              {{ product.price | money }}
+              {%- if product.tags contains 'usa-made' -%}
+                <span class="tt-product-card__tag">USA MADE</span>
+              {%- endif -%}
+            </div>
+          </div>
+        </a>
+      {%- endfor -%}
+    {%- else -%}
+      {%- comment -%} Placeholder cards when no collection is selected {%- endcomment -%}
+      {%- for i in (1..4) -%}
+        <div class="tt-product-card tt-fade-in">
+          <div class="tt-product-card__image">
+            <span class="tt-product-card__era">{{ section.blocks[forloop.index0].settings.era | default: '1952' }}</span>
+            <div class="tt-product-card__placeholder">[ PRODUCT IMAGE ]</div>
+          </div>
+          <div class="tt-product-card__info">
+            <h3 class="tt-product-card__name">{{ section.blocks[forloop.index0].settings.title | default: 'Product Title' }}</h3>
+            <p class="tt-product-card__story">{{ section.blocks[forloop.index0].settings.story | default: 'Every shirt tells a story worth wearing.' }}</p>
+            <div class="tt-product-card__price">
+              {{ section.blocks[forloop.index0].settings.price | default: '$38.00' }}
+              <span class="tt-product-card__tag">USA MADE</span>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Tintype Products",
+  "tag": "section",
+  "class": "tt-products-wrapper section-wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Section label",
+      "default": "New Arrivals"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "THE COLLECTION"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "label": "Products to show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    }
+  ],
+  "blocks": [
+    {
+      "type": "placeholder_product",
+      "name": "Placeholder product",
+      "settings": [
+        {
+          "type": "text",
+          "id": "era",
+          "label": "Era year",
+          "default": "1952"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Product title",
+          "default": "THE FOREMAN TEE"
+        },
+        {
+          "type": "text",
+          "id": "story",
+          "label": "Product story",
+          "default": "Carl made foreman at J&L Steel. Pittsburgh never forgot."
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "$38.00"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tintype Products",
+      "category": "Tintype",
+      "blocks": [
+        {
+          "type": "placeholder_product",
+          "settings": {
+            "era": "1952",
+            "title": "THE FOREMAN TEE",
+            "story": "Carl made foreman at J&L Steel. Pittsburgh never forgot.",
+            "price": "$38.00"
+          }
+        },
+        {
+          "type": "placeholder_product",
+          "settings": {
+            "era": "1947",
+            "title": "SUNDAY DINNER TEE",
+            "story": "The Miller family. Twelve people. One table. Every Sunday.",
+            "price": "$38.00"
+          }
+        },
+        {
+          "type": "placeholder_product",
+          "settings": {
+            "era": "1923",
+            "title": "UNION LOCAL 47",
+            "story": "A badge from a union that built this country.",
+            "price": "$36.00"
+          }
+        },
+        {
+          "type": "placeholder_product",
+          "settings": {
+            "era": "1968",
+            "title": "THE ROAD TRIP TEE",
+            "story": "Route 66. A station wagon. Five kids. One summer.",
+            "price": "$38.00"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

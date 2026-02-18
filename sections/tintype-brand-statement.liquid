@@ -1,0 +1,27 @@
+<section class="tt-brand-statement" id="TintypeBrandStatement-{{ section.id }}">
+  <p class="tt-brand-statement__text">
+    {{ section.settings.text }}
+  </p>
+</section>
+
+{% schema %}
+{
+  "name": "Tintype Brand Statement",
+  "tag": "section",
+  "class": "tt-brand-statement-wrapper section-wrapper",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Statement text",
+      "default": "<p><strong>Every shirt tells a story.</strong> Our designs come from real family photographs spanning the 1920s-1990s and rare vintage logos from America's industrial era. This isn't manufactured nostalgia — <strong>it's history you can wear.</strong></p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tintype Brand Statement",
+      "category": "Tintype"
+    }
+  ]
+}
+{% endschema %}
